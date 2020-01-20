@@ -9,6 +9,8 @@
 
 #endif 
 
+void DLLDIR normalFunc();
+
 class DLLDIR HelloDLL
 {
 public:

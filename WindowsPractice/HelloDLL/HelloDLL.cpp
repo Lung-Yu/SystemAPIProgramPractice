@@ -3,6 +3,11 @@
 
 using namespace std;
 
+
+void normalFunc(){
+	cout << "normal hello" << endl;
+}
+
 HelloDLL::HelloDLL(void)
 {
 }

@@ -10,6 +10,8 @@ int main(int argc, char* argv[])
 	helloDLL.hello();
 	HelloDLL::helloStatic();
 
+	normalFunc();
+
 	getchar();
 
 	return 0;
