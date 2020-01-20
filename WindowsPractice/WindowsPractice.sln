@@ -7,6 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsPractice", "WindowsP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookMouseKeyboard", "HookMouseKeyboard\HookMouseKeyboard.vcxproj", "{323201AF-2414-4B1C-8381-45E82348163E}"
 EndProject
+<<<<<<< HEAD
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloDLL", "HelloDLL\HelloDLL.vcxproj", "{593F1253-110E-4B75-B3FC-61A24071D87A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloDLLExecutor", "HelloDLLExecutor\HelloDLLExecutor.vcxproj", "{9FFF07FB-93E5-447A-AECF-2E726A3B9325}"
@@ -15,6 +16,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateFile", "CreateFile\Cr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProcessSample", "ProcessSample\ProcessSample.vcxproj", "{CF1E842E-D3CB-413C-A3FB-80B1B6EC6C46}"
 EndProject
+=======
+>>>>>>> hook
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -47,6 +50,7 @@ Global
 		{323201AF-2414-4B1C-8381-45E82348163E}.Release|Win32.ActiveCfg = Release|Win32
 		{323201AF-2414-4B1C-8381-45E82348163E}.Release|Win32.Build.0 = Release|Win32
 		{323201AF-2414-4B1C-8381-45E82348163E}.Release|x64.ActiveCfg = Release|Win32
+<<<<<<< HEAD
 		{593F1253-110E-4B75-B3FC-61A24071D87A}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{593F1253-110E-4B75-B3FC-61A24071D87A}.Debug|Mixed Platforms.Build.0 = Debug|Win32
 		{593F1253-110E-4B75-B3FC-61A24071D87A}.Debug|Win32.ActiveCfg = Debug|Win32
@@ -87,6 +91,8 @@ Global
 		{CF1E842E-D3CB-413C-A3FB-80B1B6EC6C46}.Release|Win32.ActiveCfg = Release|Win32
 		{CF1E842E-D3CB-413C-A3FB-80B1B6EC6C46}.Release|Win32.Build.0 = Release|Win32
 		{CF1E842E-D3CB-413C-A3FB-80B1B6EC6C46}.Release|x64.ActiveCfg = Release|Win32
+=======
+>>>>>>> hook
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
