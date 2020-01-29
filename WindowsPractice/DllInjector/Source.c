@@ -1,17 +1,38 @@
 #include <Windows.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <TlHelp32.h>
+
 void inject_dll(DWORD pid, PCHAR DllName);
+DWORD getProcessId(PCHAR processName);
 
 int main(int argc, char argv[]){
 
-	DWORD pid = 7540;
+	DWORD pid = getProcessId("notepad++.exe");
 	printf("pid:%d\n", pid);
 
 	if (pid){
 		inject_dll(pid, "C:\\Users\\lungyu\\Desktop\\DllTest");
 	}
 	system("pause");
+	return 0;
+}
+
+DWORD getProcessId(PCHAR processName){
+	PROCESSENTRY32 procEntry = { 0 };
+	HANDLE lehandle = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+	procEntry.dwSize = sizeof(PROCESSENTRY32);
+
+	if (lehandle != NULL){
+		if (Process32First(lehandle, &procEntry)){
+			do{
+				if (!strcmp(procEntry.szExeFile, processName))
+					return procEntry.th32ProcessID;
+
+			} while (Process32Next(lehandle, &procEntry));
+		}
+	}
+
 	return 0;
 }
 
