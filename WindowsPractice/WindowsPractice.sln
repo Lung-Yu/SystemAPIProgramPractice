@@ -41,6 +41,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DllMainTest", "DllMainTest\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{9D2FBC85-2CB0-40EB-B1AF-2D03CAD6FBD1}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreateProcessAPI", "CreateProcessAPI\CreateProcessAPI.vcxproj", "{AB14CF87-13BB-4417-96B8-B4DA0861B886}"
+EndProject
+>>>>>>> process_create
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -283,6 +288,21 @@ Global
 		{9D2FBC85-2CB0-40EB-B1AF-2D03CAD6FBD1}.Release|Win32.ActiveCfg = Release|Win32
 		{9D2FBC85-2CB0-40EB-B1AF-2D03CAD6FBD1}.Release|Win32.Build.0 = Release|Win32
 		{9D2FBC85-2CB0-40EB-B1AF-2D03CAD6FBD1}.Release|x64.ActiveCfg = Release|Win32
+<<<<<<< HEAD
+=======
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Debug|ARM.ActiveCfg = Debug|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Debug|Win32.Build.0 = Debug|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Debug|x64.ActiveCfg = Debug|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Release|ARM.ActiveCfg = Release|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Release|Win32.ActiveCfg = Release|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Release|Win32.Build.0 = Release|Win32
+		{AB14CF87-13BB-4417-96B8-B4DA0861B886}.Release|x64.ActiveCfg = Release|Win32
+>>>>>>> process_create
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
