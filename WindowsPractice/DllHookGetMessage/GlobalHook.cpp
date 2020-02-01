@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <iostream>
 
 extern HMODULE g_hDllModule;
 
@@ -8,18 +9,16 @@ HHOOK g_hHook = NULL;
 #pragma comment(linker, "/SECTION:mydata,RWS")
 
 
-LRESULT GetMsgProc(
-	int code,
-	WPARAM wParam,
-	LPARAM lParam)
+
+LRESULT GetMsgProc(int code,WPARAM wParam,LPARAM lParam)
 {
-	return ::CallNextHookEx(g_hHook, code, wParam, lParam);
+	return CallNextHookEx(g_hHook, code, wParam, lParam);
 }
 
 
 BOOL SetGlobalHook()
 {
-	g_hHook = ::SetWindowsHookEx(WH_GETMESSAGE, (HOOKPROC)GetMsgProc, g_hDllModule, 0);
+	g_hHook = SetWindowsHookEx(WH_GETMESSAGE, (HOOKPROC)GetMsgProc, g_hDllModule, 0);
 	if (NULL == g_hHook)
 	{
 		return FALSE;
@@ -31,7 +30,7 @@ BOOL UnsetGlobalHook()
 {
 	if (g_hHook)
 	{
-		::UnhookWindowsHookEx(g_hHook);
+		UnhookWindowsHookEx(g_hHook);
 	}
 	return TRUE;
 }
