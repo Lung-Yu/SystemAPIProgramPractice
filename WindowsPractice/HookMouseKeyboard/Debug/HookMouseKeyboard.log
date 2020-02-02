@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-﻿
-=======
-﻿Build started 1/20/2020 1:01:37 PM.
+﻿Build started 2/2/2020 8:12:46 PM.
      1>Project "C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\HookMouseKeyboard\HookMouseKeyboard.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
@@ -18,5 +15,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.60
->>>>>>> hook
+Time Elapsed 00:00:01.23
