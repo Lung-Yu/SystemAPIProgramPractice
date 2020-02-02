@@ -13,7 +13,6 @@ int main(){
 		dwResult = GetLastError();
 		if (dwResult != ERROR_INSUFFICIENT_BUFFER) {
 			printf("GetTokenInformation Error %u\n", dwResult);
-			return FALSE;
 		}
 	}
 
