@@ -34,3 +34,7 @@
 13. [mPing](./WindowsPractice/mPing/README.md)
 14. [ProcessSample](./WindowsPractice/ProcessSample/README.md)
 15. [Singleton](./WindowsPractice/Singleton/README.md)
+16. [CreateProcessAsUser](./WindowsPractice/CreateProcessAsUser/README.md)
+17. [ElevationOfPrivilege](./WindowsPractice/ElevationOfPrivilege/README.md)
+18. [QuicklyStartFolder](./WindowsPractice/QuicklyStartFolder/README.md)
+19. [ServiceLoader](./WindowsPractice/ServiceLoader/README.md)
