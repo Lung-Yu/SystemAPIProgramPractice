@@ -1,19 +1,6 @@
-﻿Build started 1/28/2020 7:33:20 PM.
-     1>Project "C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\HelloDLL\HelloDLL.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D HELLODLL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt HelloDLL.cpp
-         HelloDLL.cpp
-     1>c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.cpp(7): warning C4273: 'normalFunc' : inconsistent dll linkage
-                 c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.h(12) : see previous definition of 'normalFunc'
-     1>c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.cpp(12): warning C4273: 'HelloDLL::HelloDLL' : inconsistent dll linkage
-                 c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.h(17) : see previous definition of '{ctor}'
-     1>c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.cpp(16): warning C4273: 'HelloDLL::~HelloDLL' : inconsistent dll linkage
-                 c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.h(18) : see previous definition of '{dtor}'
-     1>c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.cpp(20): warning C4273: 'HelloDLL::hello' : inconsistent dll linkage
-                 c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.h(20) : see previous definition of 'hello'
-     1>c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.cpp(25): warning C4273: 'HelloDLL::helloStatic' : inconsistent dll linkage
-                 c:\users\lungyu\documents\visual studio 2013\projects\systemapiprogrampractice\windowspractice\hellodll\hellodll.h(21) : see previous definition of 'helloStatic'
-       Link:
+﻿Build started 2/2/2020 8:12:46 PM.
+     1>Project "C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\HelloDLL\HelloDLL.vcxproj" on node 3 (Build target(s)).
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\Debug\HelloDLL.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\Debug\HelloDLL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\Debug\HelloDLL.lib" /MACHINE:X86 /DLL Debug\HelloDLL.obj
             Creating library C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\Debug\HelloDLL.lib and object C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\Debug\HelloDLL.exp
          HelloDLL.vcxproj -> C:\Users\lungyu\Documents\Visual Studio 2013\Projects\SystemAPIProgramPractice\WindowsPractice\Debug\HelloDLL.dll
@@ -21,4 +8,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.56
+Time Elapsed 00:00:00.66
