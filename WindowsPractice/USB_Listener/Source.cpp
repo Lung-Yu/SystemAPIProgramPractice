@@ -4,6 +4,9 @@
 int mCreateWindow(HINSTANCE hInst);
 void mProcessMessage();
 LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
+LRESULT OnDeviceStatusChange(WPARAM wParam, LPARAM lParam);
+
+
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR args, int ncmdshow){
 
@@ -57,8 +60,59 @@ LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp){
 		PostQuitMessage(0);
 		break;
 	case WM_DEVICECHANGE:
-		MessageBox(NULL,"Message", "USB Device status change.", MB_OK);
+		//MessageBox(NULL,"Message", "USB Device status change.", MB_OK);
+		OnDeviceStatusChange(wp,lp);
 	default:
 		return DefWindowProcW(hWnd, msg, wp, lp);
 	}
+}
+
+LRESULT OnDeviceStatusChange(WPARAM wParam, LPARAM lParam){
+	switch (wParam)
+	{
+	case DBT_DEVICEARRIVAL:
+	{
+							  PDEV_BROADCAST_HDR lpdb = (PDEV_BROADCAST_HDR)lParam;
+							  if (DBT_DEVTYP_VOLUME == lpdb->dbch_devicetype)
+							  {
+								  // 根據 dbcv_unitmask 計算出設備的代號
+								  PDEV_BROADCAST_VOLUME lpdbv = (PDEV_BROADCAST_VOLUME)lpdb;
+								  DWORD dwDriverMask = lpdbv->dbcv_unitmask;
+								  DWORD dwTemp = 1;
+								  char szDriver[4] = "A:\\";
+								  for (szDriver[0] = 'A'; szDriver[0] <= 'Z'; szDriver[0]++)
+								  {
+									  if (0 < (dwTemp & dwDriverMask))
+									  {
+										  MessageBox(NULL, szDriver, "USB Device has been attach.", MB_OK);
+									  }
+									  // 左移 1 位，接著判斷下一個 Disk 符號
+									  dwTemp = (dwTemp << 1);
+								  }
+							  }
+							  break;
+	}
+	case DBT_DEVICEREMOVECOMPLETE:
+	{
+									 PDEV_BROADCAST_HDR lpdb = (PDEV_BROADCAST_HDR)lParam;
+									 if (DBT_DEVTYP_VOLUME == lpdb->dbch_devicetype)
+									 {
+										 PDEV_BROADCAST_VOLUME lpdbv = (PDEV_BROADCAST_VOLUME)lpdb;
+										 DWORD dwDriverMask = lpdbv->dbcv_unitmask;
+										 DWORD dwTemp = 1;
+										 char szDriver[4] = "A:\\";
+										 for (szDriver[0] = 'A'; szDriver[0] <= 'Z'; szDriver[0]++)
+										 {
+											 if (0 < (dwTemp & dwDriverMask))
+											 {
+												 MessageBox(NULL, szDriver, "USB Device has been remove.", MB_OK);
+											 }
+											 dwTemp = (dwTemp << 1);
+										 }
+									 }
+									 break;
+	}
+	}
+
+	return TRUE;
 }
