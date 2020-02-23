@@ -1,12 +1,15 @@
 #include <Windows.h>
+#include <Dbt.h>
 
 int mCreateWindow(HINSTANCE hInst);
+void mProcessMessage();
 LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR args, int ncmdshow){
 
 	mCreateWindow(hInst);
 
+	mProcessMessage();
 	return 0;
 }
 
@@ -32,14 +35,29 @@ int mCreateWindow(HINSTANCE hInst){
 	return 0;
 }
 
+void mProcessMessage(){
+	MSG msg = { 0 };
+
+	while (GetMessage(&msg, NULL, NULL, NULL))
+	{
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+	}
+}
+
+
+
 LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp){
 	switch (msg)
 	{
 	case WM_CLOSE:
 		DestroyWindow(hWnd);
+		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
+	case WM_DEVICECHANGE:
+		MessageBox(NULL,"Message", "USB Device status change.", MB_OK);
 	default:
 		return DefWindowProcW(hWnd, msg, wp, lp);
 	}
